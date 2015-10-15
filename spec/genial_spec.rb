@@ -5,7 +5,7 @@ describe Genial do
     expect(Genial::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'return value of dolar' do
+    expect(Genial::Currency.dolar).to be_instance_of(String)
   end
 end
