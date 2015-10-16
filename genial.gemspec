@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Renan Gurgel"]
   spec.email         = ["gurgel.renan@gmail.com"]
 
-  spec.summary       = %q{Mostra a cotação de algumas moedas em Real(R$).}
-  spec.description   = %q{Mostra a cotação de algumas moedas em Real(R$) com base nos dados do Banco Central.}
+  spec.summary       = %q{Genial, is a simple gem that allows you to check the current value of a currency in Brazilian Real.}
+  spec.description   = %q{Genial, is a simple gem that allows you to check the current value of a currency in Brazilian Real.}
   spec.homepage      = "https://github.com/gurgelrenan/genial"
   spec.license       = "MIT"
 

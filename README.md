@@ -1,4 +1,8 @@
 # Genial
+[![Gem Version](https://badge.fury.io/rb/genial.svg)](https://badge.fury.io/rb/genial)
+[![Build Status](https://travis-ci.org/gurgelrenan/genial.svg)](https://travis-ci.org/gurgelrenan/genial)
+[![Code Climate](https://codeclimate.com/github/gurgelrenan/genial/badges/gpa.svg)](https://codeclimate.com/github/gurgelrenan/genial)
+[![Dependency Status](https://gemnasium.com/gurgelrenan/genial.svg)](https://gemnasium.com/gurgelrenan/genial)
 
 Genial, is a simples gem that allows you to check the current value of a currency in [Brazilian Real](https://en.wikipedia.org/wiki/Brazilian_real). This gem has also a way to convert values.
 
