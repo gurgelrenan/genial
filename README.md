@@ -1,8 +1,8 @@
 # Genial
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/genial`. To experiment with that code, run `bin/console` for an interactive prompt.
+Genial, is a simples gem that allows you to check the current value of a currency in [Brazilian Real](https://en.wikipedia.org/wiki/Brazilian_real). This gem has also a way to convert values.
 
-TODO: Delete this and the text above, and describe your gem
+All this data is based on a API provided by [xgeek](http://xgeek.com.br/rest-api-cotacao-conversao-moedas/) that gets data from [Central Bank of Brazil](https://en.wikipedia.org/wiki/Central_Bank_of_Brazil) and this data is updated every day at 2:00 p.m (GMT -3).
 
 ## Installation
 
