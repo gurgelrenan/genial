@@ -7,24 +7,25 @@ module Genial
     base_uri "http://api.xgeek.com.br/taxa-cambio"
 
     def self.find(code)
-      get("/currency?code=#{code}").parsed_response["buying_rate"]
+      parse_response(get("/currency?code=#{code}"))
     end
 
-    def self.dolar
-      get("/currency?code=USD").parsed_response["buying_rate"]
+    def self.dollar
+      parse_response(get("/currency?code=USD"))
     end
 
     def self.euro
-      get("/currency?code=EUR").parsed_response["buying_rate"]
+      parse_response(get("/currency?code=EUR"))
     end
 
     def self.pound
-      get("/currency?code=GBP").parsed_response["buying_rate"]
+      parse_response(get("/currency?code=GBP"))
     end
 
-    def self.bitcoin
-      endpoint = "http://api.promasters.net.br/cotacao/v1/valores?moedas=BTC"
-      get(endpoint)["valores"]["BTC"]["valor"]
+    private
+
+    def self.parse_response(response)
+      response.parsed_response["buying_rate"].to_f.round(2)
     end
   end
 end

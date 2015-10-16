@@ -24,15 +24,26 @@ Or install it yourself as:
 
 The usage is pretty simple. To know the value of $1 in R$
 ```ruby
-Genial::Currency.dolar 
+Genial::Currency.dollar
 # => 3.79
 ```
 
-We can get the value of any currency in the world. Based on [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) we just need to pass the country code to method `find` and we are done. Ex: to get `euro` value:
+Main currencies:
 
 ```ruby
-Genial::Currency.find("EUR")
-# => 4.37
+Genial::Currency.dollar
+
+Genial::Currency.euro
+
+Genial::Currency.pound
+```
+
+
+We can get the value of any currency in the world. Based on [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217), we just need to pass the country code to method `find` and we are done. Ex: to get `Canadian dollar` value:
+
+```ruby
+Genial::Currency.find("CAD")
+# => 2.97
 ```
 
 To see a list with all currency codes access this [link](https://en.wikipedia.org/wiki/ISO_4217#Active_codes)
