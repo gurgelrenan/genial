@@ -2,7 +2,7 @@
 
 Genial, is a simples gem that allows you to check the current value of a currency in [Brazilian Real](https://en.wikipedia.org/wiki/Brazilian_real). This gem has also a way to convert values.
 
-All this data is based on a API provided by [xgeek](http://xgeek.com.br/rest-api-cotacao-conversao-moedas/) that gets data from [Central Bank of Brazil](https://en.wikipedia.org/wiki/Central_Bank_of_Brazil) and this data is updated every day at 2:00 p.m (GMT -3).
+All this data is based on a API provided by [xgeek](http://xgeek.com.br/rest-api-cotacao-conversao-moedas/) that gets data from [Central Bank of Brazil](https://en.wikipedia.org/wiki/Central_Bank_of_Brazil) and this data is updated during the week (working days) at 2:00 p.m (GMT -3).
 
 ## Installation
 
@@ -22,7 +22,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The usage is pretty simple. To know the value of $1 in R$
+```ruby
+Genial::Currency.dolar 
+# => 3.79
+```
+
+We can get the value of any currency in the world. Based on [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) we just need to pass the country code to method `find` and we are done. Ex: to get `euro` value:
+
+```ruby
+Genial::Currency.find("EUR")
+# => 4.37
+```
+
+To see a list with all currency codes access this [link](https://en.wikipedia.org/wiki/ISO_4217#Active_codes)
 
 ## Development
 
