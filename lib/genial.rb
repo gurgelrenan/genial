@@ -22,10 +22,19 @@ module Genial
       parse_response(get("/currency?code=GBP"))
     end
 
+    def self.convert(from, to ,value)
+      parse_convert_response(get("/convert?from=#{from}&to=#{to}&value=#{value}"))
+    end
+
     private
 
     def self.parse_response(response)
       response.parsed_response["buying_rate"].to_f.round(2)
     end
+
+    def self.parse_convert_response(response)
+        response.parsed_response["result"].to_f.round(2)
+    end
+
   end
 end
