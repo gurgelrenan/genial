@@ -23,9 +23,8 @@ module Genial
       parse_response(get("/currency?code=GBP"))
     end
 
-    def self.convert(from, to ,value)
-
-      parse_convert_response(get("/convert?from=#{from}&to=#{to}&value=#{value}"))
+    def self.convert(from, to, value)
+      convert_response(get("/convert?from=#{from}&to=#{to}&value=#{value}"))
     end
 
     private
@@ -34,17 +33,17 @@ module Genial
       response.parsed_response["buying_rate"].to_f.round(2)
     end
 
-    def self.parse_convert_response(response)
-        case response.code
-          when 200
-            response.parsed_response["result"].to_f.round(2)
-          when 404
-            puts "moeda(s) não encontrada(s)"
-          when 400
-            puts "solicitação inválida"
-          when 500
-            puts "erro interno."
-          end
+    def self.convert_response(response)
+      case response.code
+      when 200
+        response.parsed_response["result"].to_f.round(2)
+      when 404
+        puts "moeda(s) não encontrada(s)"
+      when 400
+        puts "solicitação inválida"
+      when 500
+        puts "erro interno."
       end
+    end
   end
 end
