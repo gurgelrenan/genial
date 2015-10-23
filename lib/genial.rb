@@ -45,6 +45,5 @@ module Genial
         puts "erro interno."
       end
     end
-
   end
 end
