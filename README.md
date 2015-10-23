@@ -42,6 +42,12 @@ Genial::Currency.euro
 Genial::Currency.pound
 ```
 
+To convert a value from one currency to another  is also pretty simple. Just pass the following params like this:
+```ruby
+Genial::Currency.convert("USD","BRL","30.99")
+# => 116.96
+
+```
 
 We can get the value of any currency in the world. Based on [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217), we just need to pass the country code to method `find` and we are done. Ex: to get `Canadian dollar` value:
 
