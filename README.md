@@ -43,7 +43,6 @@ Genial::Currency.pound
 ```
 
 To convert a value from one currency to another  is also pretty simple. Just pass the following params like this:
-
 ```ruby
 Genial::Currency.convert("USD","BRL","30.99")
 # => 116.96
